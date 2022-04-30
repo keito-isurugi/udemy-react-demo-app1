@@ -10,7 +10,7 @@ export const UserCard = () => {
         alt="プロフィール"
       />
       <p>名前</p>
-      <dl>
+      <SDl>
         <dt>メール</dt>
         <dd>mail@email.com</dd>
         <dt>TEL</dt>
@@ -19,7 +19,19 @@ export const UserCard = () => {
         <dd>ほげほげ</dd>
         <dt>WEB</dt>
         <dd>google.com</dd>
-      </dl>
+      </SDl>
     </div>
   );
 };
+
+const SDl = styled.dl`
+  text-align: left;
+  margin-bottom: 0px;
+  dt {
+    float: left;
+  }
+  dd {
+    padding-left: 32px;
+    padding-bottom: 8px;
+  }
+`;
