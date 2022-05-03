@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { UserContext } from "../../../providers/UserProviders";
 
 export const UserIconWithName = (props) => {
-  const { user, isAdmin } = props;
+  const { user } = props;
   const { image, name } = user;
-  const context = useContext(UserContext);
-  console.log(context);
+  const { userInfo } = useContext(UserContext);
+  const isAdmin = userInfo ? userInfo.isAdmin : false;
   return (
     <Scontainer>
       <SImage height={160} width={160} src={image} alt={name} />
